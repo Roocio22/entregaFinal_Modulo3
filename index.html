@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica módulo 3</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        
+    </head>
+
+    <body>
+      <div class="bloque">
+        <h1>Formulario información Alta Telefónica</h1>
+        
+        <div class="contenedores">
+          <form action="/action_page.php" method="post" enctype="multipart/form-data" accept-charset="UTF-8" autocomplete="off">
+            <div class="contenedor1">
+              <fieldset>
+                <legend>Datos personales</legend>
+                <label for="elem1"><span>Nombre: <span class="required">*</span></span><input type="text" class="infoBasica" name="elem1" value="" maxlength="30" required /><br></label>
+                <label for="elem2"><span>Apellidos: <span class="required">*</span></span><input type="text" class="infoBasica" name="elem2" value="" maxlength="60" required /><br></label>
+                <label for="elem3"><span>Dirección: <span class="required">*</span></span><input type="text" class="infoBasica" name="elem3" value="" maxlength="60" required /><br></label>
+                <label for="elem4"><span>Código postal: <span class="required">*</span></span><input pattern="[0-9]{5}" placeholder="&nbsp;&nbsp;5 dígitos" class="elemento-campo" name="elem4" value="" maxlength="5" required /><br></label>
+                <label for="elem5"><span>Localidad: <span class="required">*</span></span><input type="text" class="infoBasica" name="elem5" value="" required /><br></label>
+              </fieldset>
+           </div>
+
+            <br>
+            <br>
+
+            <div class="contenedor2">
+            <fieldset>
+              <legend>Tipo de Contratación</legend>
+              <input type="radio" name="tipoContratacion" class="check-campo" name="elem6"  checked="checked" required /><label for="elem6"><span>Nueva Contratación</span></label>
+              <input type="radio" name="tipoContratacion" class="check-campo" name="elem7" required /> <label for="elem7"><span>Portabilidad</span></label>
+              <input type="radio" name="tipoContratacion" class="check-campo" name="elem8" required /> <label for="elem8"><span>Cambio de Contrato</span></label>
+              <br>
+              <br>
+              <label for="elem9"><span>Elija la compañía actual:<span class="required">*</span></span></label>
+              <select name="elem" class="select-campo" required>
+                <option value="Movistar" selected>&nbsp;Movistar</option>
+                <option value="Orange"> &nbsp;Orange</option>
+                <option value="Vodafone">&nbsp;Vodafone</option>
+                <option value="Yoigo">&nbsp;Yoigo</option>
+                <option value="NoTengo">&nbsp;No tengo ninguna compañía</option>
+              </select>
+              <br>
+              <br>
+              <label for="elem10"><span>En caso de portabilidad elija la nueva compañía:<span class="required">*</span></span></label>
+              <select name="elem10" class="select-campo" required>
+                <option value="Movistar" selected>&nbsp;Movistar</option>
+                <option value="Orange"> &nbsp;Orange</option>
+                <option value="Vodafone">&nbsp;Vodafone</option>
+                <option value="Yoigo">&nbsp;Yoigo</option>
+              </select>
+            </fieldset>
+            </div>
+
+            <br>
+            <br>
+            
+               
+
+            <div class="contenedor3">
+              <fieldset>
+                <legend>Datos Bancarios:</legend>
+                <label for="elem11"><span>País: <span class="required">*</span></span><input type="text" id="pais" class="datosBancarios" name="elem11" value="&nbsp;&nbsp;ES" readonly required /> (sólo válido ES)<br></label>
+                <label for="elem12"><span>Control IBAN: <span class="required">*</span></span><input pattern="[0-9]{2}" placeholder="&nbsp;XX" id="iban" class="datosBancarios" name="elem12" value="" maxlength="2" required /> (dos dígitos)<br></label>
+                <label for="elem13"><span>Entidad: <span class="required">*</span></span><input pattern="[0-9]{4}" placeholder="&nbsp;XXXX" id="entidad" class="datosBancarios" name="elem13" value="" maxlength="4" required /> (cuatro dígitos)<br></label>
+                <label for="elem14"><span>Sucursal: <span class="required">*</span></span><input pattern="[0-9]{4}" placeholder="&nbsp;XXXX"id="sucursal" class="datosBancarios" name="elem14" value="" maxlength="4" required /> (cuatro dígitos)<br></label>
+                <label for="elem15"><span>DC: <span class="required">*</span></span><input pattern="[0-9]{2}" placeholder="&nbsp;XX" id="dc" class="datosBancarios" name="elem15" value="" maxlength="2" required /> (dos dígitos)<br></label>
+                <label for="elem16"><span>Cuenta: <span class="required">*</span></span><input pattern="[0-9]{10}" placeholder="&nbsp;XXXXXXXXXX" id="cuenta" class="datosBancarios" name="elem13" value="" maxlength="16" required /> (diez dígitos)<br></label>
+              </fieldset>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="contenedor4">
+              <fieldset required>
+                <legend>Datos Estadísiticos - ¿Cómo nos conoció?:</legend>
+                <input type="checkbox" class="click-campo" name="elem17" value=""/> <label for="elem17"><span>A través de la tv</span></label>
+                <br>
+                <input type="checkbox" class="click-campo" name="elem18" value=""/> <label for="elem18"><span>A través de la radio</span></label>
+                <br>
+                <input type="checkbox" class="click-campo" name="elem19" value=""/> <label for="elem19"><span>A través de internet</span></label>
+                <br>
+                <input type="checkbox" class="click-campo" name="elem20" value=""/> <label for="elem20"><span>Otros</span></label>
+                <br>
+                <input type="range" id="resultado" class="click-campo" name="elem21" value="" min="1" max="5" step="1">(Valoración del 1 al 5)
+                <br><br>
+                <label for="elem22"><span>Fecha de la Encuesta: <span class="required">*</span></span> <input type="date" id="fecha" class="semana-campo" name="elem22" value="2019-01-01"/></label>
+              </fieldset>
+            </div>
+
+            <br>
+            <br>
+
+
+
+            <input type="submit" name="enviar"class="boton" value="Enviar Datos" />
+            <input type="reset" name="borrar" class="boton" value="Borrar Datos"/>
+
+            <br>
+            <br>
+            
+            <button onclick="elValor()" id="btnvalue">Mostrar valoración</button>
+            <button onclick="cBancaria()" id="btncuenta">Mostrar Cuenta</button>
+            <button onclick="diaSemana()" id="btnDia">Mostrar Día de la Semana</button>
+            
+
+          </form>
+        </div>
+
+      </div>
+        
+        <script src="main.js" type="text/javascript"></script>
+
+    </body>
+</html>
