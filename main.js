@@ -43,19 +43,3 @@ function diaSemana() {
 
     alert("La fecha selecionada en el elemento es un " + semana);
 }
-
-
-
-
-
-
-
-
-/* validación formulario
-
-      https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation
-      https://www.freecodecamp.org/espanol/news/validacion-basica-de-formularios-en-javascript/
-
-      biblios
-      https://www.w3resource.com/javascript-exercises/javascript-dom-exercises.php
-      https://sweetalert2.github.io/#handling-buttons*/
